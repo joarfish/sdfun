@@ -1,0 +1,35 @@
+env:
+  es6: true
+  node: true
+  browser: true
+  mocha: true
+root: true
+parser: '@typescript-eslint/parser'
+plugins:
+  - '@typescript-eslint'
+extends:
+ - 'eslint:recommended'
+ - 'plugin:@typescript-eslint/recommended'
+ - 'plugin:prettier/recommended'
+parserOptions:
+  ecmaVersion: 2022
+  impliedStrict: false
+  sourceType: 'module'
+rules:
+  prettier/prettier: "error"
+  global-require: 'off'
+  new-cap:
+    - 'error'
+    - capIsNewExceptions: [ 'Machine' ]
+      properties: false
+  strict: 'off'
+  no-unused-vars:
+    - 'off'
+  no-trailing-spaces:
+    - 'error'
+    - skipBlankLines: true
+  '@typescript-eslint/no-empty-function': off
+  '@typescript-eslint/no-unused-vars':
+    - 'error'
+    - varsIgnorePattern: "^_"
+      argsIgnorePattern: "^_"
